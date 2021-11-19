@@ -8,7 +8,7 @@
         <title>{{ site.name }}{% if page.title and page.url != "/" %} | {{ page.title }}{% endif %}</title>
         <meta name="description" content="{{ site.description }}">
       
-        <link rel="shortcut icon" href="{{ '/{{ site.asset_dir }}/img/favicon.png' | prepend: site.baseurl | prepend: site.url }}">
+        <link rel="shortcut icon" href="{{ '/img/favicon.png' | prepend: site.asset_dir |  prepend: site.baseurl | prepend: site.url }}">
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
               integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
