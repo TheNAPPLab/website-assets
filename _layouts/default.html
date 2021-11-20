@@ -68,13 +68,19 @@
 
             <div class="my-5 pt-5 text-muted text-center text-md">
                 <p class="affiliations">
-                        <a href="https://en.diro.umontreal.ca/home/"><img src="{{ '/img/diro.png'  | prepend: site.baseurl | prepend: site.url }}" width="150px" alt=
+                  <a href="https://en.diro.umontreal.ca/home/">
+                    <img src="{{ '/img/diro.png'  | prepend: side.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="150px" alt=
                             "Department of Computer Science and Operations Research"> </a>
                         |
                         <a href="https://www.umontreal.ca/">
-                            <img src="{{ '/img/udem.png' | prepend: site.baseurl | prepend: site.url }}" width="150px" alt=
+                            <img src="{{ '/img/udem.png' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="150px" alt=
                             "Universit&eacute; de Montr&eacute;al">
-                            </a>
+                        </a> |
+                        
+                        <a href="https://mila.quebec/">
+                          <img src="{{ '/img/mila.png' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="150px" alt=
+                               "Mila">
+                        </a>
                 </p>
             </div>
 
