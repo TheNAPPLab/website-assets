@@ -6,10 +6,10 @@
 Usage:
 
 {% for item in site.data.people %}
-    {% assign person = item[1] %}
-    {% if person.role == role.key %}
-        {% include person.html person=person image=true %}
-    {% endif %}
+{% assign person = item[1] %}
+{% if person.role == role.key %}
+{% include person.html person=person image=true %}
+{% endif %}
 {% endfor %}
 
 Use the image parameter to include or not include an image.
@@ -20,43 +20,43 @@ there by default by Bootstrap columns.
 {% endcomment %}
 
 {% if person.webpage %}
-    {% capture name %}
-        <a href="{{ person.webpage | escape }}"> {{ person.display_name }} </a>
-    {% endcapture %}
+{% capture name %}
+<a href="{{ person.webpage | escape }}"> {{ person.display_name }} </a>
+{% endcapture %}
 {% else %}
-    {% assign name = person.display_name %}
-{% endif %}
-
-{% if person.github %}
-    {% capture name %}
-        {{ name }} <a href="https://github.com/{{ person.github | escape }}"><i class="fab fa-github"></i></a>
-    {% endcapture %}
+{% assign name = person.display_name %}
 {% endif %}
 
 
+<div class="card mr-2 mb-2 border-bottom-primary" style="min-width: 330px; max-width: 330px">
+  <div class="card-body">
+  {% if include.image %}
 
-{% if include.image %}
-<div class="card mr-2 mb-2 border-bottom-primary" style="min-width: 300px">
-    <div class="card-body">
-            <div class="person person-with-image row align-items-center">
-                {% include person-image.html person=person %}
-                <h4 class="person-name"> {{ name }} </h4>
-                {% if person.bio %}
-                    <div class="bio">{{person.bio}}</div>
-                {% endif %}
-            </div>
+  
+    <div class="person person-with-image row align-items-center">
+      {% include person-image.html person=person %}
+      {% endif %}
+      
+      <h4 class="person-name">&nbsp;&nbsp;&nbsp; {{ name }} </h4> </br>
+      <h5>
+      {% if person.interests %}
+        <b>Interests</b>: {{ person.interests }} </br>
+      {% endif %}
+      {% if person.coadvisor %}
+        <b>Coadvisor</b>: {{ person.coadvisor }} </br>
+      {% endif %}
+      {% if person.thesis %}
+        <b>Thesis</b>: <a href="{{ person.thesis_link | escape }}"> {{ person.thesis }} </a> </br>
+      {% endif %}
+      {% if person.current_role %}
+        <b>Current Position</b>: {{ person.current_role }} </br>
+        {% endif %}
+        </h5>
+      {% if include.image %}
     </div>
+  
+  {% endif %}
 </div>
-{% else %}
-<div class="card mr-2 mb-2 border-bottom-primary" style="min-width: 300px">
-        <div class="card-body">
-                <div class="person person-with-image row align-items-center">
-                        {% include person-image.html person=person %}
-                        <h4 class="person-name"> {{ name }} </h4>
-                        {% if person.bio %}
-                            <div class="bio">{{person.bio}}</div>
-                        {% endif %}
-                </div>
-        </div>
-</div>
-{% endif %}
+  </div>
+
+
