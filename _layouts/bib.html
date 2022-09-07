@@ -78,20 +78,23 @@
   {% if entry.arxiv %}
     <a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank" class="buttonTT">arXiv</a>
   {% endif %}
+  {% if entry.openreview %}
+    <a href="https://openreview.net/forum?id={{ entry.openreview }}" target="_blank" class="buttonTT">OpenReview</a>
+  {% endif %}
   {% if entry.html %}
     [<a href="{{ entry.html }}" target="_blank">HTML</a>]
   {% endif %}
   {% if entry.pdf %}
-    <a href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="buttonTT">PDF</a>
+    <a href="{{ entry.pdf | prepend: '/pdfs/' | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="buttonTT">PDF</a>
   {% endif %}
   {% if entry.supp %}
-    <a href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="buttonMM">Supplementary</a>
+    <a href="{{ entry.supp | prepend: '/pdfs/' | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="buttonMM">Supplementary</a>
   {% endif %}
   {% if entry.poster %}
-    <a href="{{ entry.poster | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="buttonMM">Poster</a>
+    <a href="{{ entry.poster | prepend: '/pdfs/' | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="buttonMM">Poster</a>
   {% endif %}
   {% if entry.slides %}
-    <a href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="buttonMM">Slides</a>
+    <a href="{{ entry.slides | prepend: '/pdfs/' | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="buttonMM">Slides</a>
   {% endif %}
   {% if entry.projectpage %}
     <a href="{{ entry.projectpage }}" target="_blank" class="buttonPP">Project Page</a>
