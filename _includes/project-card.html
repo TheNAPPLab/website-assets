@@ -52,7 +52,7 @@
                   <ul>
                     {% for uname in project.collaborators %}
                     {% assign person = site.data.people[uname] %}
-                    <li>
+                    <li style="display: block; width: 50%; float: left;">
                       {% if person.webpage %}
                       <a href="{{ person.webpage | escape }}"
                          style="text-decoration: none">
