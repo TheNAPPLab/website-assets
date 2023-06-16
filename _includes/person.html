@@ -40,16 +40,16 @@ there by default by Bootstrap columns.
       <h4 class="person-name">&nbsp;&nbsp;&nbsp; {{ name }} </h4> </br>
       <h5>
       {% if person.interests %}
-        <b>Interests</b>: {{ person.interests }} </br>
+       </br><b>Interests</b>: {{ person.interests }} 
       {% endif %}
       {% if person.coadvisor %}
-        <b>Coadvisor</b>: {{ person.coadvisor }} </br>
+       </br><b>Coadvisor</b>: {{ person.coadvisor }} &nbsp;&nbsp;&nbsp;
       {% endif %}
       {% if person.thesis %}
-        <b>Thesis</b>: <a href="{{ person.thesis_link | escape }}"> {{ person.thesis }} </a> </br>
+        </br><b>Thesis</b>: <a href="{{ person.thesis_link | escape }}"> {{ person.thesis }} </a> 
       {% endif %}
       {% if person.current_role %}
-        <b>Current Position</b>: {{ person.current_role }} </br>
+        </br><b>Current Position</b>: {{ person.current_role }} 
         {% endif %}
         </h5>
       {% if include.image %}
