@@ -39,11 +39,14 @@ there by default by Bootstrap columns.
       
       <h4 class="person-name">&nbsp;&nbsp;&nbsp; {{ name }} </h4> </br>
       <h5>
+       {% if person.advisor %}
+       </br><b>Advisor</b>: {{ person.advisor }} &nbsp;&nbsp;&nbsp;
+       {% endif %}       
+       {% if person.coadvisor %} 
+       </br><b>Coadvisor</b>: {{ person.coadvisor }} &nbsp;&nbsp;&nbsp;
+      {% endif %}
       {% if person.interests %}
        </br><b>Interests</b>: {{ person.interests }} 
-      {% endif %}
-      {% if person.coadvisor %}
-       </br><b>Coadvisor</b>: {{ person.coadvisor }} &nbsp;&nbsp;&nbsp;
       {% endif %}
       {% if person.thesis %}
         </br><b>Thesis</b>: <a href="{{ person.thesis_link | escape }}"> {{ person.thesis }} </a> 
