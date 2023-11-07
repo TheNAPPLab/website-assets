@@ -23,7 +23,8 @@
 
       </head>
     <body>
-        <div class="container">
+      <div class="container">
+
             <!-- This is a bit nasty, but it basically says be a column first, and on larger screens be a spaced out row -->
             <nav class="navbar sticky-top navbar-expand-lg navbar-light navbar-dark bg-primary mb-2 text-white">
                 <a class="navbar-brand" href="{{ site.base }}/">REAL</a>
@@ -52,8 +53,25 @@
                                         </a>
                                     </li>
                                     {% endfor %}
+                                    
                         </ul>
+
                       </div>
+                      <div class="navbar-right">
+                        {% for lang in site.languages %}
+                        {% if lang == "en"  %}
+                        <a href="{{ site.baseurl_root }}/">{{ lang }}</a>
+                        {% else %}
+                        | <a href="{{ site.baseurl }}/{{ lang }}/">{{ lang }}</a>
+                        {% endif %}
+                        {% endfor %}
+                      </div>
+                      <style>
+                        .navbar-right{
+                            float: right;
+                            text-align: right;
+                        }
+                      </style>
             </nav>
 
             {% if page.image %}
