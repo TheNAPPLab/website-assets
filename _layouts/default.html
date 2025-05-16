@@ -7,10 +7,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width initial-scale=1" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      
+
         <title>{{ site.name }}{% if page.title and page.url != "/" %} | {{ page.title }}{% endif %}</title>
         <meta name="description" content="{{ site.description }}">
-      
+
         <link rel="shortcut icon" href="{{ '/img/favicon.png' | prepend: site.asset_dir |  prepend: site.baseurl | prepend: site.url }}">
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
@@ -27,7 +27,7 @@
 
             <!-- This is a bit nasty, but it basically says be a column first, and on larger screens be a spaced out row -->
             <nav class="navbar sticky-top navbar-expand-lg navbar-light navbar-dark bg-primary mb-2 text-white">
-                <a class="navbar-brand" href="{{ site.base }}/">REAL</a>
+                <a class="navbar-brand" href="{{ site.base }}/">NAPPLab</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -35,9 +35,9 @@
                         <ul class="navbar-nav">
                                 {% assign shorturl = page.url | replace:'.html','' | replace:'index','' %}
                                 {% for item in site.navigation %}
-            
+
                                     {% assign itemshorturl = item.link | replace:'.html','' %}
-            
+
                                     {% assign maybe-active = '' %}
                                     {% if item.title == 'Research' and page.layout == 'project' %}
                                         {% assign maybe-active = 'active' %}
@@ -45,7 +45,7 @@
                                     {% if itemshorturl == shorturl or is-research %}
                                         {% assign maybe-active = 'active' %}
                                     {% endif %}
-            
+
                                     <li class="nav-item">
                                         <a class="nav-link {{ maybe-active }}"
                                            href="{{ site.base }}{{ item.link }}">
@@ -53,7 +53,7 @@
                                         </a>
                                     </li>
                                     {% endfor %}
-                                    
+
                         </ul>
 
                       </div>
@@ -88,22 +88,22 @@
             {{ content }}
 
             <div class="my-5 pt-5 text-muted text-center text-md">
-              <p class="affiliations">
-                <a href="https://www.mines.edu/">
-                  <img src="{{ '/img/mines_logo.jpg'  | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="350px"  height = "120px" alt=
-                          "Colorado School of MInes"> </a>
-                      |
-                      <a href="https://cs.mines.edu/">
-                          <img src="{{ '/img/Mines-computer-science.png' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="500px"  height = "100px" alt=
-                          "Computer Science Department Colorado School of Mines">
-                      </a> |
+                <p class="affiliations">
+                  <a href="https://www.mines.edu/">
+                    <img src="{{ '/img/mines_logo.jpg'  | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="350px"  height = "120px" alt=
+                            "Colorado School of MInes"> </a>
+                        |
+                        <a href="https://cs.mines.edu/">
+                            <img src="{{ '/img/Mines-computer-science.png' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="500px"  height = "100px" alt=
+                            "Computer Science Department Colorado School of Mines">
+                        </a> |
 
-                      <a href="TheNAPPLab.github.io">
-                        <img src="{{ '/img/napplab-logo.jpg' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="150px" alt=
-                             "NAPPLab">
-                      </a>
-              </p>
-          </div>
+                        <a href="TheNAPPLab.github.io">
+                          <img src="{{ '/img/napplab-logo.jpg' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="150px" alt=
+                               "NAPPLab">
+                        </a>
+                </p>
+            </div>
 
         </div> <!-- /container -->
 
