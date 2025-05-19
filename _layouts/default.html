@@ -11,7 +11,7 @@
         <title>{{ site.name }}{% if page.title and page.url != "/" %} | {{ page.title }}{% endif %}</title>
         <meta name="description" content="{{ site.description }}">
 
-        <link rel="shortcut icon" href="{{ '/img/favicon.png' | prepend: site.asset_dir |  prepend: site.baseurl | prepend: site.url }}">
+        <link rel="shortcut icon" href="{{ '/img/Mines-Logo-triangle-blue.png' | prepend: site.asset_dir |  prepend: site.baseurl | prepend: site.url }}">
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
               integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="{{ '/css/sb-admin-2.min.css' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}">
+        <link rel="stylesheet" href="{{ '/css/napplab.css' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}">
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
       </head>
@@ -26,7 +27,8 @@
       <div class="container">
 
             <!-- This is a bit nasty, but it basically says be a column first, and on larger screens be a spaced out row -->
-            <nav class="navbar sticky-top navbar-expand-lg navbar-light navbar-dark bg-primary mb-2 text-white">
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light navbar-dark mines mb-2 text-white">
+              <!-- <nav class="navbar sticky-top navbar-expand-lg navbar-light navbar-dark mb-2 text-white"  style="background-color: #21314d !important;"> -->
                 <a class="navbar-brand" href="{{ site.base }}/">NAPPLab</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -90,18 +92,16 @@
             <div class="my-5 pt-5 text-muted text-center text-md">
                 <p class="affiliations">
                   <a href="https://www.mines.edu/">
-                    <img src="{{ '/img/mines_logo.jpg'  | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="350px"  height = "120px" alt=
-                            "Colorado School of MInes"> </a>
-                        |
-                        <a href="https://cs.mines.edu/">
-                            <img src="{{ '/img/Mines-computer-science.png' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="500px"  height = "100px" alt=
-                            "Computer Science Department Colorado School of Mines">
-                        </a> |
-
-                        <a href="TheNAPPLab.github.io">
-                          <img src="{{ '/img/napplab-logo.jpg' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" width="150px" alt=
-                               "NAPPLab">
-                        </a>
+                    <img src="{{ '/img/mines_logo.jpg'  | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}"
+                        width="350px"  height = "120px" 
+                        style="margin-right: 30px;" 
+                        alt="Colorado School of MInes"> 
+                  </a>
+                    
+                  <a href="TheNAPPLab.github.io">
+                    <img src="{{ '/img/napplab-logo.jpg' | prepend: site.asset_dir | prepend: site.baseurl | prepend: site.url }}" 
+                        width="150px" alt="NAPPLab">
+                  </a>
                 </p>
             </div>
 

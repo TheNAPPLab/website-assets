@@ -1,0 +1,5 @@
+.mines {
+    background-color: #21314d !important;
+    background-image: linear-gradient(180deg, #21314d 10%, #142030 100%);
+    background-size: cover;
+  }
