@@ -1,5 +1,19 @@
-.mines {
+.mines-theme-dark-blue {
     background-color: #21314d !important;
     background-image: linear-gradient(180deg, #21314d 10%, #142030 100%);
     background-size: cover;
   }
+
+
+.mines-theme-blaster-blue {
+  background-color: #09396C !important;
+  background-size: cover;
+}
+.mines-theme-pale-blue {
+  background-color: #CFDCE9 !important;
+  background-size: cover;
+}
+.mines-theme-light-blue {
+  background-color: #879EC3 !important;
+  background-size: cover;
+}
